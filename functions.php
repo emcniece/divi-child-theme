@@ -21,3 +21,8 @@
   }
 
   add_action( 'wp_enqueue_scripts', 'divi_child_scripts' );
+
+function yearsc_func( $atts ){
+  return date('Y');
+}
+add_shortcode( 'year', 'yearsc_func' );
